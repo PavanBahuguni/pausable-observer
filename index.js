@@ -29,7 +29,7 @@ const shouldObservableBePaused$ = Rx.Observable.create(observer => {
 
 /*
 Swicth map is used to return the desired observable, based on data being emitted on the shouldObservableBePaused$.
-When there is a true event we retrn never() which doeant emit any data
+When there is a true event we retrn a silent observable, which doeant emit any data.
 WHen there is a false event we return our normalObservable$, to which we really want to subscribe.
 And swicthmap always takes the latest observable.
 */
